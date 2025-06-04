@@ -59,8 +59,8 @@ results = list(search_results.items_as_dicts())
 print(f"Number of tiles found intersecting given bounding box: {len(results)}")
 
 times = pd.DatetimeIndex([result['properties']['datetime'] for result in results])
-# hrefs = {'hrefs': [result['assets']['0_B01_WTR']['href'] for result in results]}
-data = {'hrefs': [value['href'] for result in results for key, value in result['assets'].items() if '0_B01_WTR' in key], 'tile_id': [value['href'].split('/')[-1].split('_')[3] for result in results for key, value in result['assets'].items() if '0_B01_WTR' in key]}
+# data = {'hrefs': [value['href'] for result in results for key, value in result['assets'].items() if '0_B01_WTR' in key], 'tile_id': [value['href'].split('/')[-1].split('_')[3] for result in results for key, value in result['assets'].items() if '0_B01_WTR' in key]}
+data = {'hrefs': [value['href'] for result in results for key, value in result['assets'].items() if '0_B02_BWTR' in key], 'tile_id': [value['href'].split('/')[-1].split('_')[3] for result in results for key, value in result['assets'].items() if '0_B02_BWTR' in key]}
 
 # Construct Pandas DataFrame to summarize granules from search results
 if yamlData['estuary'] == 'Grays Harbor':

@@ -1,8 +1,8 @@
 # File for loading discharge, water level, and DFM files
 ---
-startDate: '2024-09-01' # YYYY-MM-DD (adjust start and end date to be smaller for script to run faster)
-endDate: '2024-09-23' # YYYY-MM-DD
-targetDate: '2024-09-18' # Finds image closest to date
+startDate: '2024-12-01' # YYYY-MM-DD (adjust start and end date to be smaller for script to run faster)
+endDate: '2025-02-01' # YYYY-MM-DD
+targetDate: '2024-12-19' # Finds image closest to date
 
 
 # Define estuary (choose one)
