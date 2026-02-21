@@ -62,6 +62,9 @@ times = pd.DatetimeIndex([result['properties']['datetime'] for result in results
 # data = {'hrefs': [value['href'] for result in results for key, value in result['assets'].items() if '0_B01_WTR' in key], 'tile_id': [value['href'].split('/')[-1].split('_')[3] for result in results for key, value in result['assets'].items() if '0_B01_WTR' in key]}
 data = {'hrefs': [value['href'] for result in results for key, value in result['assets'].items() if '0_B02_BWTR' in key], 'tile_id': [value['href'].split('/')[-1].split('_')[3] for result in results for key, value in result['assets'].items() if '0_B02_BWTR' in key]}
 
+## take every other data['hrefs'] bc output gives 2 lines per entry
+data = {'hrefs': data['hrefs'][::2], 'tile_id': data['tile_id'][::2]}
+
 # Construct Pandas DataFrame to summarize granules from search results
 if yamlData['estuary'] == 'Grays Harbor':
     tileID = 'T10TDT'

@@ -1,0 +1,10 @@
+# File for loading discharge, water level, and DFM files
+---
+startDate: '2025-12-01' # YYYY-MM-DD (adjust start and end date to be smaller for script to run faster)
+endDate: '2025-12-31' # YYYY-MM-DD
+
+# Define box edges
+left: -124.201586
+bottom: 46.857488
+right: -123.232373
+top: 47.076639
